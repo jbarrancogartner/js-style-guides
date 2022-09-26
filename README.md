@@ -4,7 +4,7 @@ It was inspired from Airbnb's Javascript [Airbnb's Javascript Style Guide](https
 
 > **Note**: this guide assumes you are using [Babel](https://babeljs.io), and requires that you use [babel-preset-airbnb](https://npmjs.com/babel-preset-airbnb) or the equivalent. It also assumes you are installing shims/polyfills in your app, with [airbnb-browser-shims](https://npmjs.com/airbnb-browser-shims) or the equivalent.
 
-For additional references, you can check the, quite short, [Airbnb's React Style Guide](https://github.com/airbnb/javascript/tree/master/react).
+For additional references, you can check the, quite short, [Airbnb's React & JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react).
 
 ## Table of Contents
 
