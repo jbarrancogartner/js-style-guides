@@ -29,16 +29,16 @@ For additional references, you can check the, quite short, [Airbnb's React & JSX
 
 ## Most common disparities
 
- - Use of `const`, `let`, and `var` exchangeably around the codebase. [Go to](#references--prefer-const)
+ - Using `const`, `let`, and `var` exchangeably around the codebase. [Go to](#references--prefer-const)
  - Mutating objects when adding or deleting props. [Go to](#objects--rest-spread)
- - Not using of property value shorthands on objects. [Go to](#es6-object-concise)
+ - Not using property value shorthands on objects. [Go to](#es6-object-concise)
  - Mutating props of functions while defining default values. [Go to](#es6-default-parameters)
  - Not destructuring props of a function or a component. [Go to](#destructuring--object)
- - Interchange single quote with double quotes. [Go to](#strings--quotes)
- - Use of concatenation over template strings. [Go to](#es6-template-literals)
+ - Interchanging single quote with double quotes. [Go to](#strings--quotes)
+ - Using concatenation over template strings. [Go to](#es6-template-literals)
  - Not including trailing commas. [Go to](#commas--leading-trailing)
- - Use of functions and helpers' names not encompassed within the naming conventions. [Go to](#naming-conventions)
- - Use of Promises over Async/Await. [Go to](#promises-async-await)
+ - Naming functions and helpers' outside the realm of the naming conventions. [Go to](#naming-conventions)
+ - Using Promises over Async/Await. [Go to](#promises-async-await)
 
 ## References
 
