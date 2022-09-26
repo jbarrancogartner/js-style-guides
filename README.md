@@ -35,7 +35,7 @@ It was inspired from Airbnb's Javascript [Airbnb's Javascript Style Guide](https
  - Interchange single quote with double quotes. [Go to](#strings--quotes)
  - Use of concatenation over template strings. [Go to](#es6-template-literals)
  - Not including trailing commas. [Go to](#commas--leading-trailing)
- - Not following naming conventions. [Go to](#naming)
+ - Not following naming conventions. [Go to](#naming-conventions)
  - Use of Promises over Async/Await. [Go to](#promises-async-await)
 
 ## References
