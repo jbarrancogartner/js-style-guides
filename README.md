@@ -4,6 +4,8 @@ It was inspired from Airbnb's Javascript [Airbnb's Javascript Style Guide](https
 
 > **Note**: this guide assumes you are using [Babel](https://babeljs.io), and requires that you use [babel-preset-airbnb](https://npmjs.com/babel-preset-airbnb) or the equivalent. It also assumes you are installing shims/polyfills in your app, with [airbnb-browser-shims](https://npmjs.com/airbnb-browser-shims) or the equivalent.
 
+For additional references, you can check the, quite short, [Airbnb's React Style Guide](https://github.com/airbnb/javascript/tree/master/react).
+
 ## Table of Contents
 
   1. [References](#references)
@@ -27,7 +29,7 @@ It was inspired from Airbnb's Javascript [Airbnb's Javascript Style Guide](https
 
 ## Most common disparities
 
- - Use of `const`, `let`, and `var` around the codebase. [Go to](#references--prefer-const)
+ - Use of `const`, `let`, and `var` exchangeably around the codebase. [Go to](#references--prefer-const)
  - Mutating objects when adding or deleting props. [Go to](#objects--rest-spread)
  - Not using of property value shorthands on objects. [Go to](#es6-object-concise)
  - Mutating props of functions while defining default values. [Go to](#es6-default-parameters)
