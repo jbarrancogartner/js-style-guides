@@ -37,7 +37,7 @@ For additional references, you can check the, quite short, [Airbnb's React & JSX
  - Interchange single quote with double quotes. [Go to](#strings--quotes)
  - Use of concatenation over template strings. [Go to](#es6-template-literals)
  - Not including trailing commas. [Go to](#commas--leading-trailing)
- - Use namings not encompassed within the naming conventions. [Go to](#naming-conventions)
+ - Use of functions and helpers' names not encompassed within the naming conventions. [Go to](#naming-conventions)
  - Use of Promises over Async/Await. [Go to](#promises-async-await)
 
 ## References
