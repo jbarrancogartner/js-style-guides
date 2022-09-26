@@ -1,6 +1,6 @@
 # Gartner Peer Insights JavaScript Style Guide
 
-*It was inspired from Airbnb's Javascript [Airbnb's Javascript Style Guide](https://github.com/airbnb/javascript) *
+It was inspired from Airbnb's Javascript [Airbnb's Javascript Style Guide](https://github.com/airbnb/javascript)
 
 > **Note**: this guide assumes you are using [Babel](https://babeljs.io), and requires that you use [babel-preset-airbnb](https://npmjs.com/babel-preset-airbnb) or the equivalent. It also assumes you are installing shims/polyfills in your app, with [airbnb-browser-shims](https://npmjs.com/airbnb-browser-shims) or the equivalent.
 
@@ -24,9 +24,19 @@
   1. [Semicolons](#semicolons)
   1. [Naming Conventions](#naming-conventions)
   1. [Promises & Async/Await](#promises-async-await)
-  1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
-  1. [ECMAScript 6+ (ES 2015+) Styles](#ecmascript-6-es-2015-styles)
 
+## Most common disparities
+
+ - Use of `const`, `let`, and `var` around the codebase. [Go to](#references--prefer-const)
+ - Mutating objects when adding or deleting props. [Go to](#objects--rest-spread)
+ - Not using of property value shorthands on objects. [Go to](#es6-object-concise)
+ - Mutating props of functions while defining default values. [Go to](#es6-default-parameters)
+ - Not destructuring props of a function or a component. [Go to](#destructuring--object)
+ - Interchange single quote with double quotes. [Go to](#strings--quotes)
+ - Use of concatenation over template strings. [Go to](#es6-template-literals)
+ - Not including trailing commas. [Go to](#commas--leading-trailing)
+ - Not following naming conventions. [Go to](#naming)
+ - Use of Promises over Async/Await. [Go to](#promises-async-await)
 
 ## References
 
@@ -65,7 +75,7 @@
     ```
 
   <a name="references--block-scope"></a><a name="1.3"></a>
-  - [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped, whereas `var` is function-scoped.
+  - [1.3](#references--block-scope) Note that both `let` and `const` are block-scoped, whereas `var` is function-scoped.
 
     ```javascript
     // const and let only exist in the blocks they are defined in.
@@ -96,13 +106,13 @@
     const item = {};
     ```
 
-  <a name="es6-object-concise"></a><a name="2.1"></a>
-  - [2.1](#es6-object-concise) Use property value shorthand. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand)
+  <a name="es6-object-concise"></a><a name="2.2"></a>
+  - [2.2](#es6-object-concise) Use property value shorthand. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand)
 
     > Why? It is shorter and descriptive.
 
     ```javascript
-    const michaelScott = 'Michael Scott';
+    const michaelScott = "Michael Scott";
 
     // bad
     const obj = {
@@ -115,29 +125,29 @@
     };
     ```
 
-  <a name="objects--quoted-props"></a><a name="2.2"></a>
-  - [2.2](#objects--quoted-props) Only quote properties that are invalid identifiers. eslint: [`quote-props`](https://eslint.org/docs/rules/quote-props)
+  <a name="objects--quoted-props"></a><a name="2.3"></a>
+  - [2.3](#objects--quoted-props) Only quote properties that are invalid identifiers. eslint: [`quote-props`](https://eslint.org/docs/rules/quote-props)
 
     > Why? In general it's considered subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
 
     ```javascript
     // bad
     const bad = {
-      'foo': 3,
-      'bar': 4,
-      'data-blah': 5,
+      "foo": 3,
+      "bar": 4,
+      "data-blah": 5,
     };
 
     // good
     const good = {
       foo: 3,
       bar: 4,
-      'data-blah': 5,
+      "data-blah": 5,
     };
     ```
 
-  <a name="objects--rest-spread"></a><a name="2.3"></a>
-  - [2.3](#objects--rest-spread) Prefer the object spread syntax over [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to shallow-copy objects. Use the object rest parameter syntax to get a new object with certain properties omitted. eslint: [`prefer-object-spread`](https://eslint.org/docs/rules/prefer-object-spread)
+  <a name="objects--rest-spread"></a><a name="2.4"></a>
+  - [2.4](#objects--rest-spread) Prefer the object spread syntax over [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to shallow-copy objects. Use the object rest parameter syntax to get a new object with certain properties omitted. eslint: [`prefer-object-spread`](https://eslint.org/docs/rules/prefer-object-spread)
 
     ```javascript
     // very bad
@@ -178,10 +188,10 @@
     const someStack = [];
 
     // bad
-    someStack[someStack.length] = 'abracadabra';
+    someStack[someStack.length] = "abracadabra";
 
     // good
-    someStack.push('abracadabra');
+    someStack.push("abracadabra");
     ```
 
   <a name="es6-array-spreads"></a><a name="3.3"></a>
@@ -206,7 +216,7 @@
   - [3.4](#arrays--from-iterable) To convert an iterable object to an array, use spreads `...` instead of [`Array.from`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 
     ```javascript
-    const foo = document.querySelectorAll('.foo');
+    const foo = document.querySelectorAll(".foo");
 
     // good
     const nodes = Array.from(foo);
@@ -1436,11 +1446,8 @@
 
 ## Promises & Async/Await
 
-  <a name="accessors--not-required"></a><a name="18.1"></a>
-  - [18.1](#accessors--not-required) Async/Await over Promises.
-
-  <a name="accessors--no-getters-setters"></a><a name="18.1"></a>
-  - [18.1](#accessors--no-getters-setters) Use Async/Await syntax over Promises. Async/Await syntax used along with `try catch` prevents [callback hell](http://callbackhell.com/). 
+  <a name="promises-async-await"></a><a name="18.1"></a>
+  - [18.1](#promises-async-await) Use Async/Await syntax over Promises. Async/Await syntax used along with `try catch` prevents [callback hell](http://callbackhell.com/). 
 
     ```javascript
     // bad
